@@ -1,7 +1,6 @@
 ---
-date: {}
-title: LED Lighting
-published: false
+date: 2024-12-02
+title: LED Lighting for Robotics
 ---
 LED lighting is commonly used in robots for purposes including illumination, communication, and aesthetics. This article covers key topics in LED lighting design and implementation as relevant to the robotics field.
 
@@ -13,22 +12,22 @@ As robots evolve to work in increasingly unstructured environments, interaction 
 Well-executed LED lighting may appear simple from a user’s perspective, but there can be a deceiving amount of complexity involved in successful execution. In many robotic applications, lighting implementation involves not only the selection of the physical LEDs, but also product design, mechanical design and material selection, electrical considerations, and programming. This guide seeks to provide an overview of key topics in the application of LED lighting to robots.
     
 ## Examples of Lighting on Robots
-![](assets/fetch_robot.png)
+![](assets/fetch-robot.png)
 A Fetch warehouse robot projects a blue light in front of it to alert people near corners 
 [link](https://mms.businesswire.com/media/20211021005119/en/918128/5/RollerTop-Guide-02229-FetchCore.jpg)
 
-![](assets/pudu_bellabot.png)
+![](assets/pudu-bellabot.png)
 A Pudu Bellabot restaurant serving robot uses a subsurface display to communicate. [link](https://mms.businesswire.com/media/20211021005119/en/918128/5/RollerTop-Guide-02229-FetchCore.jpg)
 
 
-![](assets/franka_lights.png)
+![](assets/franka-lights.png)
 The Franka robot uses different LED colors to show robot status [link](https://wiki.arcoslab.org/tutorials_media/panfa-franka/extdeviceonoff.png)
 
 
-![](assets/relay_robot.png)
+![](assets/relay-robot.png)
 Relay Robotic’s delivery robot uses LEDs to light an interior compartment. [link](https://s3.amazonaws.com/digitaltrends-uploads-prod/2016/02/Relay-being-loaded.jpg)
 
-![](assets/bear_robotics.png)
+![](assets/bear-robotics.png)
 Bear Robotic’s restaurant robot uses LEDs to communicate and indicate which shelf to take from. [link](https://www.bearrobotics.ai/servi-plus)
 
 
@@ -37,7 +36,7 @@ Bear Robotic’s restaurant robot uses LEDs to communicate and indicate which sh
 ### LEDs
 	
 Visible light is electromagnetic radiation in the visible spectrum (shown below). Different colors of light correspond to different wavelengths. Additionally, colors can be imitated by mixing different wavelengths.  
-![](assets/em_spectrum.png)
+![](assets/em-spectrum.png)
 
 [link](https://cdn.kastatic.org/ka-perseus-images/1f69f2373d9136ed9a061a3a1b64cbffe3abc9b2.png)
 
@@ -59,10 +58,10 @@ The quality of white light is often measured using the color render index (CRI).
 
 For some applications, CRI does not matter and it makes sense to go with the cheapest option. Parking garages, for example, often appear to have poor light because low CRI lights are used. In other applications having a high CRI is important - for example high CRI lighting is often used in kitchens because being able to accurately judge the color of meat is important for food safety. In robotics, having high-CRI light may be important for culinary robots, exploratory robots, or medical robots. 
 
-![](assets/CRI_image.png)
+![](assets/cri-image.png)
 [link](https://goodearthlighting.com/media/CRI%20Good%20Earth%20Lighting%20-%20800%20x%20800.png )
 
-![](assets/Spectral_graphs.png)
+![](assets/spectral-graphs.png)
 
 The image above shows the relative energy of wavelengths emitted by different light sources.
 [link](https://www.researchgate.net/figure/Spectral-outputs-of-the-various-light-sources_fig14_320644849 )
@@ -87,7 +86,7 @@ Increasing the distance between the LED and the diffuser will increase the appar
 A rough surface finish on a clear material is a very common diffuser. A common example of this is frosted glass.  By changing the roughness of the surface, the level of diffusion can be adjusted.
 Some materials are specifically engineered for diffusion, for example by imbedding them with particles which scatter light. These materials can achieve very high efficiency as measured by the amount of light that passes through the material. The Makrolon DQ line of plastics is one example of a material engineered for diffusion ([https://solutions.covestro.com/en/highlights/articles/theme/applications/lighting-and-led](https://solutions.covestro.com/en/highlights/articles/theme/applications/lighting-and-led)).  Silicon is another commonly used diffuser for LED strips, since it is flexible.
 
-![](assets/Makrolon_plastic.png)
+![](assets/makrolon-plastic.png)
 
 ### Refraction and Light Piping
 One common problem encountered in robotics and other electronics is that putting an LED chip where you want the light to appear is often inconvenient. A technique called light piping allows you to put LEDs in one location, while “piping” the light to another location to be shown. One example of why this is useful: you can put an indicator light on the outside of an enclosure while keeping the LED for that light on a main PCB.  This can considerably simplify the electrical setup.
@@ -144,4 +143,3 @@ LED lighting is becoming increasingly important for robotics and can play a cruc
 - Adafruit has a strong guide for using their neopixel library for WS2812 compatable LEDs: [https://learn.adafruit.com/adafruit-neopixel-uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide) Note: their library works for any WS2812  or SK6812 chips, you don’t have to buy Adafruit's neopixels. It also works with WS2811 (which uses 12V instead of 5V)
 - A summary of total internal reflectance as relevant to light pipes: [https://www.bivar.com/resources/blog/the-science-of-light-pipes-reflection-refraction-and-diffusion/ ](https://www.bivar.com/resources/blog/the-science-of-light-pipes-reflection-refraction-and-diffusion/ )
 - Overview of how LEDs work: [https://electronics.howstuffworks.com/led.htm](https://cdn.kastatic.org/ka-perseus-images/1f69f2373d9136ed9a061a3a1b64cbffe3abc9b2.png)
-
